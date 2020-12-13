@@ -88,10 +88,10 @@
 #define SHOW_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Bootscreen.h on startup.
-#define SHOW_CUSTOM_BOOTSCREEN
+//#define SHOW_CUSTOM_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Statusscreen.h on the status screen.
-#define CUSTOM_STATUS_SCREEN_IMAGE
+//#define CUSTOM_STATUS_SCREEN_IMAGE
 
 // @section machine
 
@@ -410,7 +410,7 @@
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
 #define TEMP_SENSOR_0 1
-#define TEMP_SENSOR_1 1
+#define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
 #define TEMP_SENSOR_4 0
@@ -494,9 +494,9 @@
     #define DEFAULT_Ki_LIST {   1.18,   1.18 }
     #define DEFAULT_Kd_LIST {  66.76,  66.76 }
   #else
-    #define DEFAULT_Kp  17.72
-    #define DEFAULT_Ki   1.18
-    #define DEFAULT_Kd  66.76
+    #define DEFAULT_Kp 15.45
+    #define DEFAULT_Ki 1.01
+    #define DEFAULT_Kd 58.86
   #endif
 #endif // PIDTEMP
 
@@ -535,9 +535,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 10.00
-  #define DEFAULT_bedKi .023
-  #define DEFAULT_bedKd 305.4
+  #define DEFAULT_bedKp 107.97
+  #define DEFAULT_bedKi 21.26
+  #define DEFAULT_bedKd 365.6
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
